@@ -133,6 +133,7 @@ public class CustomCucumberTestNGRunnerWithTag {
         return modifiedList;
     }
 
+    // To remove the feature files  run time
     private List<CucumberFeature> removingTagFromFeatureFile(List<CucumberFeature> featureList){
         List<CucumberFeature> modifiedList = new ArrayList<>();
         for (CucumberFeature cucumberFeature: featureList) {
