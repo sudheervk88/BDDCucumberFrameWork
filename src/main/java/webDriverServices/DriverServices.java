@@ -24,6 +24,7 @@ public class DriverServices {
     private IReader reader;
     private GenericHelper genericHelper;
     private BrowserConfiguration browserConfiguration;
+    private JavascriptHelper javascriptHelper;
 
     public void launchBrowser(){
 
@@ -38,6 +39,8 @@ public class DriverServices {
         textBoxHelper = TextBoxHelper.getInstance(getDriver());
         dropDownHelper = DropDownHelper.getInstance(getDriver());
         genericHelper = GenericHelper.getInstance(getDriver());
+        javascriptHelper = JavascriptHelper.getInstance(getDriver());
+
         browserHelper.maximizePage();
 
     }
@@ -105,5 +108,9 @@ public class DriverServices {
 
     public IReader getIReader() {
         return reader;
+    }
+
+    public JavascriptHelper getJavascriptHelper(){
+        return javascriptHelper;
     }
 }

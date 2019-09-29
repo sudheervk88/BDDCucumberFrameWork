@@ -23,8 +23,8 @@
                     <reuseForks>false</reuseForks> <!--every time it will create new vm and won't use any existing one-->
                     <testFailureIgnore>true</testFailureIgnore> <!--Execution continue even if there is a test failure-->
                     <includes>
-                    <include>**/*Runner.java</include>
-                        <!-- <include>GenericRunner</include> !-->
+                  <!--  <include>**/*Runner.java</include> !-->
+                         <include>GenericRunner</include>
                           </includes>
                           <excludes>
                               <exclude>CustomGenericRunner</exclude>
