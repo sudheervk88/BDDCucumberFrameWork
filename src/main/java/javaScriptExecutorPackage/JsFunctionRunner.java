@@ -5,7 +5,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
         features = "src/main/java/javascriptExecutorPackage",
-        glue  = {"javascriptExecutorPackage", "genericHook"},
+        glue  = {"genericHook","javaScriptExecutorPackage"},
         dryRun = false,
         monochrome = true
         // tags = "@Smoke-dropdown"

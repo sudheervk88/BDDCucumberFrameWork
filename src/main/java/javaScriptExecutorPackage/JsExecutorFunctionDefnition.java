@@ -1,5 +1,6 @@
 package javaScriptExecutorPackage;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
@@ -29,24 +30,16 @@ public class JsExecutorFunctionDefnition {
         this.readConfigFile = services.getIReader();
     }
 
-    @When("^JS Function_I navigate to google page \"([^\"]*)\"$")
+    @Given("^JS Function_I navigate to google page \"([^\"]*)\"$")
     public void js_Function_I_navigate_to_google_page(String url) throws Throwable {
         driver.get(url);
     }
 
-    @Then("^JS Function_I click on Sign in button$")
+    @When("^JS Function_I click on Sign in button$")
     public void js_Function_I_click_on_Sign_in_button() throws Throwable {
-        WebDriverWait wait = getWait(driver,readConfigFile.getExplicitWait());
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("gb_70")));
-        services.getJavascriptHelper().executeScript(By.id("gb_70"));
+       services.getJavascriptHelper().jscriptExecutor("arguments[0].click();",By.xpath("//a[text()='Sign in']"));
     }
 
 
-    private WebDriverWait getWait(WebDriver driver, int timeOut){
 
-        WebDriverWait wait = new WebDriverWait(driver,timeOut);
-        wait.pollingEvery(250, TimeUnit.MILLISECONDS);
-        wait.ignoring(NoSuchElementException.class);
-        return wait;
-    }
 }
