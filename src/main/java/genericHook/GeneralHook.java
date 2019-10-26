@@ -31,6 +31,7 @@ public class GeneralHook {
 
          if(driver != null)
              driver.quit();
+
      }
 
     private void captureScreenShot(Scenario scenario) {

@@ -24,13 +24,16 @@ public class JavascriptHelper {
 
     }
 
-    public Object jscriptExecutor(String Script, By locator){
+    public Object jscriptExecutor(String script, By locator){
         WebDriverWait wait = getWait();
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
         element = webDriver.findElement(locator);
         wait.until(ExpectedConditions.elementToBeClickable(element));
-        return js.executeScript(Script,element);
+        return js.executeScript(script,element);
     }
+
+
+
 
     private WebDriverWait getWait(){
         WebDriverWait wait = new WebDriverWait(webDriver,60);
