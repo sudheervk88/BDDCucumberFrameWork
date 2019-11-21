@@ -38,13 +38,28 @@ public class GenericHelper {
            FileUtils.copyFile(screenshot,new File(directory.getAbsolutePath() + File.separator +fileName));
        }
        catch (IOException e) {
-
+           e.printStackTrace();
        }
 
    }
+    public void takeScreenShot(String fileName){
+
+        File screenshot =((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(screenshot,new File(File.separator +fileName));
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+
      public byte[] takeScreenShot(){
        byte[] screenShot = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.BYTES);
        return screenShot;
      }
+
 
 }
