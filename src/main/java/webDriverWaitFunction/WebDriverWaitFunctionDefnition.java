@@ -111,40 +111,7 @@ public class WebDriverWaitFunctionDefnition  {
             }
 
         };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         return wait;
+        return wait;
 
     }
 

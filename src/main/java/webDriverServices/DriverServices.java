@@ -25,7 +25,8 @@ public class DriverServices {
     private GenericHelper genericHelper;
     private BrowserConfiguration browserConfiguration;
     private JavascriptHelper javascriptHelper;
-
+    private ActionHelper actionHelper;
+    
     public void launchBrowser(){
 
       //chromeDriver = new CustomChromeDriver();
@@ -40,7 +41,7 @@ public class DriverServices {
         dropDownHelper = DropDownHelper.getInstance(getDriver());
         genericHelper = GenericHelper.getInstance(getDriver());
         javascriptHelper = JavascriptHelper.getInstance(getDriver());
-
+        actionHelper = ActionHelper.getInstance(getDriver());
         browserHelper.maximizePage();
 
     }
@@ -110,7 +111,6 @@ public class DriverServices {
         return reader;
     }
 
-    public JavascriptHelper getJavascriptHelper(){
-        return javascriptHelper;
-    }
+    public JavascriptHelper getJavascriptHelper(){ return javascriptHelper; }
+    public ActionHelper getActionHelper(){ return actionHelper; }
 }
