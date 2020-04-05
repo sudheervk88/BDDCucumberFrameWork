@@ -37,7 +37,7 @@ public class AlertFunctionDefnition {
     @When("^Alerts_I click on try it button it should show the alert$")
     public void alerts_i_click_on_try_it_button_it_should_show_the_alert() throws Throwable {
        WebDriverWait wait = getWait(driver,readConfigFile.getExplicitWait());
-       wait.until(ExpectedConditions.presenceOfElementLocated(By.id("tryhome")));
+       wait.until(ExpectedConditions.presenceOfElementLocated(By.id("tryhome"))); 
        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id("iframeResult")));
        driverServices.getButtonHelper().click(By.xpath("//button[text()='Try it']"));
     }

@@ -8,7 +8,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         glue  = {"alertFunction", "genericHook"},
         dryRun = false,
         monochrome = true,
-        tags = "@Prompt_popUp"
+        tags = "@Boot_strap_popUp"
 )
 public class AlertFunctionRunner extends AbstractTestNGCucumberTests {
 }

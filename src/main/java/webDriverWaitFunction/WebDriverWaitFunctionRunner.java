@@ -7,8 +7,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         features = "src/main/java/WebDriverWaitFunction",
         // glue  = "browserFunction
         dryRun = false,
-        monochrome = true,
-        tags = " @ExplicitWait"
+        monochrome = true
+       // tags = "@ExplicitWait"
 )
 
 public class WebDriverWaitFunctionRunner extends AbstractTestNGCucumberTests {
