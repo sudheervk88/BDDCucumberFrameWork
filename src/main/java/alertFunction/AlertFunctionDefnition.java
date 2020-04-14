@@ -24,7 +24,7 @@ public class AlertFunctionDefnition {
    public AlertFunctionDefnition(DriverServices driverServices){
      this.driverServices = driverServices;
      this.driver = driverServices.getDriver();
-     this.readConfigFile = driverServices.getIReader();
+    // this.readConfigFile = driverServices.getIReader();
 
    }
 
