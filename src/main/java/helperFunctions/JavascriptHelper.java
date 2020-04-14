@@ -1,3 +1,8 @@
+/*
+ * Java script helper package
+ * 
+ */
+
 package helperFunctions;
 
 import org.openqa.selenium.*;
