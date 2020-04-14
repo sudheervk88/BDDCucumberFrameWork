@@ -7,6 +7,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CustomInternetExplorerDriver implements BrowserConfiguration{
 
     private void setDriverExecutable(){
@@ -28,7 +30,8 @@ public class CustomInternetExplorerDriver implements BrowserConfiguration{
 
     public WebDriver getIeDriver(){
 
-        setDriverExecutable();
+        //setDriverExecutable();
+    	WebDriverManager.iedriver().setup();
         InternetExplorerOptions internetExplorerOptions = getIeOption();
         InternetExplorerDriver internetExplorerDriver = new InternetExplorerDriver(internetExplorerOptions);
         return internetExplorerDriver;

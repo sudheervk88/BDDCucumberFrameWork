@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CustomChromeDriver implements BrowserConfiguration {
 
   private void setDriverExecutable(){
@@ -23,7 +25,8 @@ public class CustomChromeDriver implements BrowserConfiguration {
   }
 
   public WebDriver getChromeDriver(){
-      setDriverExecutable();
+      //setDriverExecutable();
+	  WebDriverManager.chromedriver().setup();
       ChromeOptions options = getChromeOptions();
       ChromeDriver chromeDriver = new ChromeDriver(options);
       return chromeDriver;
