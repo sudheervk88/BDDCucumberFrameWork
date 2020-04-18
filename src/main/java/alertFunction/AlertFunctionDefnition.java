@@ -94,7 +94,7 @@ public class AlertFunctionDefnition {
 
     @Then("^Alerts_It should open bootstrap popup$")
     public void alerts_it_should_open_bootstrap_popup() throws Throwable {
-       WebDriverWait wait = getWait(driver,readConfigFile.getExplicitWait());
+       WebDriverWait wait = getWait(driver,60);  //readConfigFile.getExplicitWait()
        webElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Close']")));
 
     }
