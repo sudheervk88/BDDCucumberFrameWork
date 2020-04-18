@@ -37,8 +37,11 @@ public class GeneralHook {
      @After
      public void afterScenario(Scenario scenario) throws IOException {
         String screenShotFileName = "D:\\ExtentReport\\" +scenario.getName().replaceAll(" "," ") +".jpeg";
+        
         if(scenario.isFailed()){
             driverServices.getGenericHelper().takeScreenShot(screenShotFileName);
+           
+            
          }
         customExtentReporter.createTest(scenario,screenShotFileName);
         customExtentReporter.writeToReport();
