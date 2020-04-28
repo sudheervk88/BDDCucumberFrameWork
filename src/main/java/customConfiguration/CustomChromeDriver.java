@@ -27,6 +27,7 @@ public class CustomChromeDriver implements BrowserConfiguration {
   public WebDriver getChromeDriver(){
       //setDriverExecutable();
 	  WebDriverManager.chromedriver().setup();
+	  System.setProperty("webdriver.chrome.silentOutput", "true");
       ChromeOptions options = getChromeOptions();
       ChromeDriver chromeDriver = new ChromeDriver(options);
       return chromeDriver;

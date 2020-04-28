@@ -35,6 +35,7 @@ public class CustomFirefoxDriver implements BrowserConfiguration{
     public WebDriver getFirefoxDriver(){
        // setDriverExecutable();
     	WebDriverManager.firefoxdriver().setup();
+    	System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
         FirefoxProfile firefoxProfile = getFirefoxProfile();
         FirefoxOptions firefoxOptions = getFirefoxOption(firefoxProfile);
         FirefoxDriver firefoxDriver = new FirefoxDriver(firefoxOptions);
