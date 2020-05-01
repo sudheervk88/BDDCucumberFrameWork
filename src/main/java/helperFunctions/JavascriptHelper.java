@@ -29,7 +29,7 @@ public class JavascriptHelper {
 
     }
 
-    public Object jscriptExecutor(String script, By locator){
+    public Object jsExecutor(String script, By locator){
         WebDriverWait wait = getWait();
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
         element = webDriver.findElement(locator);
@@ -37,6 +37,13 @@ public class JavascriptHelper {
         return js.executeScript(script,element);
     }
 
+    public Object jsExecutor(String script){
+    	
+        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+        return js.executeScript(script);
+    }
+
+    
 
 
 
