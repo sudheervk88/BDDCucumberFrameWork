@@ -37,7 +37,7 @@ public class JsExecutorFunctionDefnition {
 
     @When("^JS Function_I click on Sign in button$")
     public void js_Function_I_click_on_Sign_in_button() throws Throwable {
-        services.getJavascriptHelper().jscriptExecutor("arguments[0].click();",By.xpath("//a[@title='Google apps']"));
+        services.getJavascriptHelper().jsExecutor("arguments[0].click();",By.xpath("//a[@title='Google apps']"));
     }
 
 
