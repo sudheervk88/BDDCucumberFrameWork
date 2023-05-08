@@ -29,14 +29,14 @@ public class GeneralHook {
     @Before
     public void beforeScenario(Scenario scenario){
         if(!isReporterRunning){
-            customExtentReporter = new CustomExtentReporter("D:\\ExtentReport\\AutomationReport.html");
+            customExtentReporter = new CustomExtentReporter(System.getProperty("user.dir")+"\\ExtentReport\\AutomationReport.html");
             isReporterRunning = true;
         }
     }
 
      @After
      public void afterScenario(Scenario scenario) throws IOException {
-        String screenShotFileName = "D:\\ExtentReport\\" +scenario.getName().replaceAll(" "," ") +".jpeg";
+        String screenShotFileName = System.getProperty("user.dir")+"ExtentReport\\AutomationReport.html"+scenario.getName().replaceAll(" "," ") +".jpeg";
         
         if(scenario.isFailed()){
             driverServices.getGenericHelper().takeScreenShot(screenShotFileName);

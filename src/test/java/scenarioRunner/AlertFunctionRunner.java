@@ -8,7 +8,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         glue  = {"alertFunction", "genericHook"},
         dryRun = false,
         monochrome = true,
-        tags = "@Prompt_popUp",
+        //tags = "@Prompt_popUp",
         plugin = {"pretty","html:target/HTMLReport","json:target/JsonReport/BugCreation.json",
                 "junit:target/JunitReport/BugCreation.xml"}
 )
