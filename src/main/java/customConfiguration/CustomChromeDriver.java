@@ -10,14 +10,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CustomChromeDriver implements BrowserConfiguration {
 
-  private void setDriverExecutable(){
-//      String Chrome_Path = ResourceUtils.getResourcePath("chromedriver.exe");
-//      System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY,Chrome_Path) ;
-       //  System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY,"D:\\MavenCuc\\chromedriver.exe") ;
-      // CHROME_DRIVER_EXE_PROPERTY - contains "webdriver.chrom.driver property"//
-
-      WebDriverManager.chromedriver().setup();
-  }
+//  private void setDriverExecutable(){
+////      String Chrome_Path = ResourceUtils.getResourcePath("chromedriver.exe");
+////      System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY,Chrome_Path) ;
+//       //  System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY,"D:\\MavenCuc\\chromedriver.exe") ;
+//      // CHROME_DRIVER_EXE_PROPERTY - contains "webdriver.chrom.driver property"//
+//
+//      WebDriverManager.chromedriver().setup();
+//  }
 
   private ChromeOptions getChromeOptions(){
 
